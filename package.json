@@ -132,6 +132,7 @@
     "qunit": "^2.6.2",
     "rollup": "^0.65.0",
     "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.3.0",
     "shelljs": "^0.8.2",
     "shx": "^0.3.2",
@@ -181,11 +182,11 @@
     },
     {
       "path": "./dist/js/bootstrap.bundle.js",
-      "maxSize": "45 kB"
+      "maxSize": "60 kB"
     },
     {
       "path": "./dist/js/bootstrap.bundle.min.js",
-      "maxSize": "25 kB"
+      "maxSize": "28 kB"
     },
     {
       "path": "./dist/js/bootstrap.js",

@@ -1,12 +1,13 @@
-const path    = require('path')
-const babel   = require('rollup-plugin-babel')
-const resolve = require('rollup-plugin-node-resolve')
+const path     = require('path')
+const babel    = require('rollup-plugin-babel')
+const resolve  = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
 
 const pkg     = require(path.resolve(__dirname, '../package.json'))
 const BUNDLE  = process.env.BUNDLE === 'true'
 const year    = new Date().getFullYear()
 
-let fileDest  = 'bootstrap.js'
+let fileDest   = 'bootstrap.js'
 const external = ['jquery', 'hammerjs', 'popper.js']
 const plugins = [
   babel({
@@ -28,10 +29,16 @@ const globals = {
 
 if (BUNDLE) {
   fileDest = 'bootstrap.bundle.js'
-  // Remove last entry in external array to bundle Popper
-  external.pop()
+  // We just keep jQuery as external
+  external.length = 1
   delete globals['popper.js']
-  plugins.push(resolve())
+  delete globals.hammerjs
+  plugins.push(
+    commonjs({
+      include: 'node_modules/**'
+    }),
+    resolve()
+  )
 }
 
 module.exports = {
