@@ -1,0 +1,81 @@
+{
+    "username": "BROWSER_STACK_USERNAME",
+    "key": "BROWSER_STACK_ACCESS_KEY",
+    "test_path": "js/tests/index.html",
+    "test_framework": "qunit",
+    "test_server_port": 3000,
+    "project": "Bootstrap v3",
+    "exit_with_fail": true,
+    "browsers": [
+      {
+        "os":"OS X",
+        "os_version":"Yosemite",
+        "browser":"Safari",
+        "browser_version":"8.0"
+      },
+      {
+        "os":"OS X",
+        "os_version":"Yosemite",
+        "browser":"Chrome",
+        "browser_version":"latest"
+      },
+      {
+        "os":"OS X",
+        "os_version":"Yosemite",
+        "browser":"Firefox",
+        "browser_version":"latest"
+      },
+      {
+        "os":"Windows",
+        "os_version":"8.1",
+        "browser":"IE",
+        "browser_version":"11.0"
+      },
+      {
+        "os":"Windows",
+        "os_version":"8",
+        "browser":"IE",
+        "browser_version":"10.0"
+      },
+      {
+        "os":"Windows",
+        "os_version":"7",
+        "browser":"IE",
+        "browser_version":"9.0"
+      },
+      {
+        "os":"Windows",
+        "os_version":"7",
+        "browser":"IE",
+        "browser_version":"8.0"
+      },
+      {
+        "os":"Windows",
+        "os_version":"XP",
+        "browser":"IE",
+        "browser_version":"7.0"
+      },
+      {
+        "os":"Windows",
+        "os_version":"8.1",
+        "browser":"Chrome",
+        "browser_version":"latest"
+      },
+      {
+        "os":"Windows",
+        "os_version":"8.1",
+        "browser":"Firefox",
+        "browser_version":"latest"
+      },
+      {
+        "os":"ios",
+        "os_version":"11.2",
+        "device":"iPhone 6"
+      },
+      {
+        "os":"android",
+        "os_version":"4.4",
+        "device":"Google Nexus 5"
+      }
+    ]
+}
